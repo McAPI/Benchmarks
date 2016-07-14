@@ -1,7 +1,7 @@
 ## Minecraft Web API Benchmarking
 
 Me, as the owner of McAPI.de, I made a statement that McAPI.de is one of the fastest APIs out in the ocean to prove that I developed a little PHP script.
-The benchmark script is currently testing UUID to name and name to UUID API endpoints. 
+The benchmark script is currently testing UUID to name and name to UUID API endpoints.
 
 I tested the following services:
 
@@ -9,7 +9,7 @@ I tested the following services:
 - http://mcapi.ca
 - http://minecraft-api.com
 - http://mc-api.net
-- http://api.razex.net (currently not included, not working 7/7/2016)
+- http://api.razex.de (currently not included, not working 14/7/2016)
 
 # Hardware and Software
 To run this benchmark I am using my own computer. It's running a Intel i7-5930k, 16GB DDR4 on Samsung 840EVO SSD. On the software site is a PHP5.6 back-end.

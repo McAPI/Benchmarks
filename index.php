@@ -33,7 +33,7 @@ $services = array(
     'mcapi.ca'          => (new McAPICAService),
     'minecraft-api.com' => (new MinecraftAPICOM),
     'mc-api.net'        => (new McAPINET),
-    //'api.razex.net'     => (new Razex), Seems to be broken (7 - 7 - 2016)
+    //'api.razex.de'     => (new Razex), Seems to be broken (14 - 7 - 2016 -> http://puu.sh/q1L6l/74170fdfd5.png)
 );
 
 output("Loaded %d services.", count($services));
