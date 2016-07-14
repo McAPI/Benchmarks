@@ -9,7 +9,7 @@ I tested the following services:
 - http://mcapi.ca
 - http://minecraft-api.com
 - http://mc-api.net
-- http://api.razex.de (currently not included, not working 14/7/2016)
+- http://api.razex.de (currently not included, not working 14/7/2016 - http://puu.sh/q1L6l/74170fdfd5.png)
 
 # Hardware and Software
 To run this benchmark I am using my own computer. It's running a Intel i7-5930k, 16GB DDR4 on Samsung 840EVO SSD. On the software site is a PHP5.6 back-end.
