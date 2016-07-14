@@ -20,6 +20,13 @@ The network is an async 25Mb connection in Germany provided by 1&1.
 You also can run this on your own setup. Just clone the project and run the `php.exe index.php` from your console. Than copy the result into a text file
 called `benchmark-d-m-yyyy-<your-username>.txt`. Create a new PR and done.
 
+# Score
+ - Lower score is better.
+ - The expression for the calculation is (t * 1000) / b
+    * t -> time in seconds
+    * b -> total bytes
+ - This calculation is fair because it takes also the amount of data provided by the API not only the execution time.  
+
 # Disclaimer
 - I am the founder and developer of the McAPI.de.
 - All requests were made with the same script, software setup and hardware.

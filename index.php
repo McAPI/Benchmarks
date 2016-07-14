@@ -91,9 +91,11 @@ foreach($result as $name => $entry) {
     output($name);
     output("    - Total Requests:  %d", ($entry['valid'] + $entry['invalid']));
     output("    - Total Bytes:  %d", $entry['totalBytes']);
-    output("    - Avg. Bytes:  %.2fs", $entry['averageBytes']);
+    output("    - Avg. Bytes:  %.2f", $entry['averageBytes']);
     output("    - Total Time:  %.2fs", $entry['totalTime']);
     output("    - Avg. Time:  %.2fs", $entry['averageTime']);
+    output("    ------------------");
+    output("    - Score: %.2f", ($entry['totalTime'] * 1000) / $entry['totalBytes']);
 }
 
 // Just a simple method to output data
