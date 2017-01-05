@@ -6,7 +6,7 @@ ini_set('display_errors', 'On');
 output("Start loading identifiers.");
 
 // Load Identifiers
-$file = new SplFileObject('usernames.txt');
+$file = new SplFileObject('uuids.txt');
 $identifiers = array();
 
 while(!($file->eof())) {
@@ -29,11 +29,11 @@ require_once __DIR__ . '/services/McAPINET.class.php';
 require_once __DIR__ . '/services/Razex.class.php';
 
 $services = array(
-    'mcapi.de'          => (new McAPIDEService),
-    'mcapi.ca'          => (new McAPICAService),
+    //'mcapi.de'          => (new McAPIDEService),
+    //'mcapi.ca'          => (new McAPICAService),
     'minecraft-api.com' => (new MinecraftAPICOM),
-    'mc-api.net'        => (new McAPINET),
-    //'api.razex.de'     => (new Razex), Seems to be broken (14 - 7 - 2016 -> http://puu.sh/q1L6l/74170fdfd5.png)
+    //'mc-api.net'        => (new McAPINET),
+    //'api.razex.de'     => (new Razex),
 );
 
 output("Loaded %d services.", count($services));
@@ -68,8 +68,11 @@ foreach($services as $name => $service) {
 
         // If the data is valid, we can use it to calculate the scores
         $deltaResult[$valid ? 'valid' : 'invalid']++;
-        $deltaResult['totalTime'] += $data['time'];
-        $deltaResult['totalBytes'] += $data['bytes'];
+
+        if($valid === true) {
+            $deltaResult['totalTime'] += $data['time'];
+            $deltaResult['totalBytes'] += $data['bytes'];
+        }
 
         $deltaResult['log'][] = $data;
 
@@ -90,6 +93,7 @@ echo PHP_EOL . PHP_EOL . PHP_EOL;
 foreach($result as $name => $entry) {
     output($name);
     output("    - Total Requests:  %d", ($entry['valid'] + $entry['invalid']));
+    output("    - Valid/Failed: %d/%d", $entry['valid'], $entry['invalid']);
     output("    - Total Bytes:  %d", $entry['totalBytes']);
     output("    - Avg. Bytes:  %.2f", $entry['averageBytes']);
     output("    - Total Time:  %.2fs", $entry['totalTime']);
@@ -125,6 +129,7 @@ function request($url) {
 
     curl_setopt_array($curl, array(
         CURLOPT_RETURNTRANSFER  => true,
+        CURLOPT_FOLLOWLOCATION  => true,
         CURLOPT_SSL_VERIFYPEER  => false,
         CURLOPT_URL             => $url,
     ));

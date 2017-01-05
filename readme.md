@@ -1,14 +1,14 @@
 ## Minecraft Web API Benchmarking
 
 Me, as the owner of McAPI.de, I made a statement that McAPI.de is one of the fastest APIs out in the ocean to prove that I developed a little PHP script.
-The benchmark script is currently testing UUID to name and name to UUID API endpoints.
+The benchmark script is only testing the UUID to Name endpoint.
 
 I tested the following services:
 
 - http://mcapi.de
-- http://mcapi.ca
+- http://mcapi.ca (currently not included, removed endpoint 5/1/2017 - http://puu.sh/tc11F/e993bb58ea.png)
 - http://minecraft-api.com
-- http://mc-api.net
+- http://mc-api.net (currently not included, removed endpoint 5/1/2017 - http://puu.sh/tc17I/47a2eec6cb.png)
 - http://api.razex.de (currently not included, not working 14/7/2016 - http://puu.sh/q1L6l/74170fdfd5.png)
 
 # Hardware and Software
@@ -17,7 +17,7 @@ The script itself can be found in this repository, if you have any complains fee
 The network is an async 25Mb connection in Germany provided by 1&1.  
 
 # Run & Submit
-You also can run this on your own setup. Just clone the project and run the `php.exe index.php` from your console. Than copy the result into a text file
+You also can run this on your own setup. Just clone the project and run the `php index.php` from your console. Than copy the result into a text file
 called `benchmark-d-m-yyyy-<your-username>.txt`. Create a new PR and done.
 
 # Score
