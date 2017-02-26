@@ -29,7 +29,7 @@ require_once __DIR__ . '/services/McAPINET.class.php';
 require_once __DIR__ . '/services/Razex.class.php';
 
 $services = array(
-    //'mcapi.de'          => (new McAPIDEService),
+    'mcapi.de'          => (new McAPIDEService),
     //'mcapi.ca'          => (new McAPICAService),
     'minecraft-api.com' => (new MinecraftAPICOM),
     //'mc-api.net'        => (new McAPINET),
