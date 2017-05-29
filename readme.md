@@ -6,10 +6,10 @@ The benchmark script is only testing the UUID to Name endpoint.
 I tested the following services:
 
 - http://mcapi.de
-- http://mcapi.ca (currently not included, removed endpoint 5/1/2017 - http://puu.sh/tc11F/e993bb58ea.png)
-- http://minecraft-api.com
-- http://mc-api.net (currently not included, removed endpoint 5/1/2017 - http://puu.sh/tc17I/47a2eec6cb.png)
-- http://api.razex.de (currently not included, not working 14/7/2016 - http://puu.sh/q1L6l/74170fdfd5.png)
+- http://mcapi.ca (currently not included, removed endpoint 5/1/2017 - https://screenshots.firefoxusercontent.com/images/5fe3d541-d687-4c5b-a716-e52e2e757376.png)
+- http://minecraft-api.com 
+- http://mc-api.net (currently not included, removed endpoint 28/5/2017 - https://screenshots.firefoxusercontent.com/images/21282260-8bdb-4051-81bf-436dbc1b68e0.png)
+- http://api.razex.de (currently not included, not working 28/5/2017 - http://puu.sh/q1L6l/74170fdfd5.png)
 
 # Hardware and Software
 To run this benchmark I am using my own computer. It's running a Intel i7-5930k, 16GB DDR4 on Samsung 840EVO SSD. On the software site is a PHP5.6 back-end.
